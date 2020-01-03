@@ -1,0 +1,44 @@
+.main-chat
+  .main-chat__group-info
+    .info-left
+      .info-left__group-name
+        テスト
+      .info-left__group-member
+        Member : masa
+    .info-right
+    =link_to "#", class: "info-right__btn" do
+      Edit
+  .main-chat__message-list
+    .chat-list
+      .chat-list__name
+        masa
+      .chat-list__date
+        2019/11/20(Web) 17:43:01
+    .message-list
+      おはよう！
+
+    .chat-list
+      .chat-list__name
+        masa
+      .chat-list__date
+        2019/11/20(Web) 17:43:01
+    .message-list
+      おはよう！
+
+    .chat-list
+      .chat-list__name
+        masa
+      .chat-list__date
+        2019/11/20(Web) 17:43:01
+    .message-list
+      おはよう！  
+
+  .main-chat__message-form
+    .message-form
+      .new-message
+        %input.new-message__text{:placeholder => "type a message", :typ => "text", :value => ""}/
+        .new-message__image
+          %label
+            =icon('far', 'image', class: "new-message__image, new-message__icon ")
+            %input{type: "file", class: "new-message__image, new-message__file"}
+      %input.submmit-btn{:type=>"submit", :value=>"Send"}/
