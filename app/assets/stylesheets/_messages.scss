@@ -1,0 +1,178 @@
+* {
+  box-sizing: border-box;
+}
+
+.side-bar{
+  height: 100vh;
+  width: 300px;
+  &__user-name{
+    background-color: #253141;
+    height: 100px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .top-items{
+      height: 20px;
+      width: 260px;
+      display: flex;
+      justify-content: space-between;
+      &__name{
+        font-size: 16px;
+        color: $main-color;
+        font-weight: bold;
+        line-height: 20px;
+      }
+      &__icons{
+        width: 60px;
+        line-height: 20px;
+      }
+      &--edit{
+        padding-right: 5px;
+      }
+      &__icon{
+        color: $main-color;
+        text-decoration: none;
+      }  
+    }
+  }
+      
+  &__group-list{
+    background-color: #2f3e51;
+    height: calc(100vh - 100px);
+    width: 300px;
+    padding: 20px 20px 0 20px;
+    .group-list{
+      display: flex;
+      flex-direction: column;
+      &__name{
+        color: $main-color;
+        font-weight: bold;
+        font-size: 15px;
+        text-decoration: none;
+      }
+      &__message{
+        color: $main-color;
+        font-weight: bold;
+        font-size: 11px;
+        padding-top: 5px;
+        padding-bottom: 40px;
+        text-decoration: none;
+      }
+    }
+  }  
+}
+
+.main-chat{
+  height: 100vh;
+  width: $main-width;
+  &__group-info{
+    background-color: $main-color;
+    height: 100px;
+    width: $main-width;
+    border-bottom: 2px solid #eeeeee;
+    display: flex;
+    justify-content: space-between;
+    .info-left{
+      padding-left: 40px;
+      &__group-name{
+        padding-top: 35px;
+        color: #333333;
+        font-size: 20px;
+        }
+      &__group-member{
+        padding-top: 15px;
+        color: #999999;
+        font-size: 12px;
+        }
+      }
+    .info-right{
+      &__btn{
+        height: 40px;
+        width: 72px;
+        color: $btn-color;
+        font-size: 16px;
+        border: 1px solid $btn-color;
+        line-height: 40px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-top: 28px;
+        margin-right: 40px;
+        text-decoration: none;
+      }
+    }
+  }
+  &__message-list{
+    background-color: #fafafa;
+    height: calc(100vh - 100px - 90px); 
+    width: $main-width;
+    padding-left: 40px;
+    padding-top: 35px;
+    .chat-list{
+      display: flex;
+      &__name{
+        color: #333333;
+        font-size: 16px;
+      }
+      &__date{
+        color: #999999;
+        font-size: 12px;
+        padding-left: 10px;
+      }
+    }
+    .message-list{
+      color: #434a54;
+      font-size: 14px;
+      padding-top: 12px;
+      padding-bottom: 46px;
+    }
+  }
+  &__message-form{
+    background-color: #d2d2d2;
+    height: 90px;
+    width: $main-width;
+    .message-form{
+      height: 50px;
+      width: 100%;
+      padding: 20px 40px;
+      display: flex;
+      .new-message{
+        background-color: $main-color;
+        height: 50px;
+        width: 100%;
+        display: flex;
+        position: relative;
+        &__text{
+          height: 50px;
+          width: 100%;
+          padding-left: 10px;
+        }
+        &__image{
+          font-size: 1.5em;
+          position: absolute;
+          right: 10px;
+          line-height: 50px;
+        }
+        &__icon{
+          cursor: pointer;
+        }
+        &__file{
+          display: none;
+        }
+      }
+      .submmit-btn{
+        background-color: $btn-color;
+        color: $main-color;
+        height: 50px;
+        width: 100px;
+        margin-left: 15px;
+        text-align: center;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.wrapper{
+  display: flex;
+}
