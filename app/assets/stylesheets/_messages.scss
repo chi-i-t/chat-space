@@ -87,21 +87,25 @@
         }
       }
     .info-right{
-      &__btn{
+      height: 40px;
+      width: 72px;
+      margin-top: 28px; 
+      margin-right: 40px;
+      .edit-btn{
+        display: inline-block;
         height: 40px;
-        width: 72px;
+        width: 100%;
         color: $btn-color;
         font-size: 16px;
         border: 1px solid $btn-color;
         line-height: 40px;
         padding-left: 20px;
         padding-right: 20px;
-        margin-top: 28px;
-        margin-right: 40px;
         text-decoration: none;
       }
     }
   }
+
   &__message-list{
     background-color: #fafafa;
     height: calc(100vh - 100px - 90px); 
@@ -127,49 +131,46 @@
       padding-bottom: 46px;
     }
   }
-  &__message-form{
+
+  &__form{
     background-color: #d2d2d2;
     height: 90px;
     width: $main-width;
-    .message-form{
+    padding: 20px 40px;
+    .new_message {
       height: 50px;
       width: 100%;
-      padding: 20px 40px;
       display: flex;
-      .new-message{
-        background-color: $main-color;
+      .message-form{
         height: 50px;
-        width: 100%;
-        display: flex;
+        width:  calc(100vw - 300px - 195px);
         position: relative;
         &__text{
           height: 50px;
           width: 100%;
-          padding-left: 10px;
+          padding: 10px;
         }
         &__image{
           font-size: 1.5em;
           position: absolute;
           right: 10px;
           line-height: 50px;
-        }
-        &__icon{
           cursor: pointer;
+          .file{
+            display: none;
+          }
         }
-        &__file{
-          display: none;
-        }
-      }
-      .submmit-btn{
-        background-color: $btn-color;
-        color: $main-color;
-        height: 50px;
-        width: 100px;
-        margin-left: 15px;
-        text-align: center;
-        cursor: pointer;
-      }
+      } 
     }
+    .submit-btn{
+      background-color: $btn-color;
+      color: $main-color;
+      height: 50px;
+      width: 100px;
+      // float: right;
+      margin-left: 15px;
+      cursor: pointer;
+    }       
   }
 }
 
