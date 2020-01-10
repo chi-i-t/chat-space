@@ -112,23 +112,26 @@
     width: $main-width;
     padding-left: 40px;
     padding-top: 35px;
-    .chat-list{
-      display: flex;
-      &__name{
-        color: #333333;
-        font-size: 16px;
-      }
-      &__date{
-        color: #999999;
-        font-size: 12px;
-        padding-left: 10px;
-      }
-    }
-    .message-list{
-      color: #434a54;
-      font-size: 14px;
-      padding-top: 12px;
+    overflow: scroll;
+    .list{
       padding-bottom: 46px;
+      .chat-list{
+        display: flex;
+        &__name{
+          color: #333333;
+          font-size: 16px;
+        }
+        &__date{
+          color: #999999;
+          font-size: 12px;
+          padding-left: 10px;
+        }
+      }
+      .message-list{
+        color: #434a54;
+        font-size: 14px;
+        padding-top: 12px;
+      }
     }
   }
 
@@ -170,7 +173,7 @@
       // float: right;
       margin-left: 15px;
       cursor: pointer;
-    }       
+    }
   }
 }
 
