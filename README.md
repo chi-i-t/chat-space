@@ -56,6 +56,7 @@ Ruby/Ruby on Rails/JavaScript/jQuery/MySQL/Github/AWS/Visual Studio Code
 - has_many :messages
 - has_many :groups_users
 - has_many :groups through: :groups_users
+- has_many :likes
 
 
 ## groupsテーブル
@@ -79,6 +80,7 @@ Ruby/Ruby on Rails/JavaScript/jQuery/MySQL/Github/AWS/Visual Studio Code
 - belog_to :group
 - belong_to :user
 
+
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
@@ -86,7 +88,20 @@ Ruby/Ruby on Rails/JavaScript/jQuery/MySQL/Github/AWS/Visual Studio Code
 |image|string||
 |group_id|integer|null: false,foreign_key: true|
 |user_id|integer|null: false,foreign_key: true|
+|likes_count|integer|
 
 ### Association
 - belog_to :user
 - belong_to :group
+- has_many :likes
+
+
+## likesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer||
+|message_id|integer||
+
+### Association
+- belog_to :user
+- belog_to :message
