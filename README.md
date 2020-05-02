@@ -68,6 +68,7 @@ Ruby/Ruby on Rails/JavaScript/jQuery/MySQL/Github/AWS/Visual Studio Code
 - has_many :messages
 - has_many :groups_users
 - has_many :users through: :groups_users
+- has_many :likes
 
 
 ## groups_usersテーブル
@@ -101,7 +102,9 @@ Ruby/Ruby on Rails/JavaScript/jQuery/MySQL/Github/AWS/Visual Studio Code
 |------|----|-------|
 |user_id|integer||
 |message_id|integer||
+|group_id|integer||
 
 ### Association
 - belog_to :user
 - belog_to :message
+- belog_to :group

@@ -9,3 +9,16 @@
       %p.message-list__text
         = message.text
     = image_tag message.image.url, class: 'message-list__image' if message.image.present?
+  .likes-count
+    - if message.like_user(current_user.id)
+      = button_to group_message_like_path(@group, message.id, @like), method: :delete, id: "like-button", remote: true do
+        %i.fas.fa-heart
+        %span
+          = message.likes_count
+    -else  
+      = button_to group_message_likes_path(@group, message.id), id: "like-button", remote: true do
+        %i.far.fa-heart
+        %span
+          = message.likes_count
+ 
+
