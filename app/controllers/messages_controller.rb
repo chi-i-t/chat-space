@@ -4,7 +4,6 @@ class MessagesController < ApplicationController
   def index
     @message = Message.new
     @messages = @group.messages.includes(:user)
-    @group = Group.find(params[:group_id])
     @like = Like.where(user_id: current_user.id, group_id: params[:group_id], message_id: params[:message_id])
   end
 
