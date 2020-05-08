@@ -180,3 +180,21 @@
 .wrapper{
   display: flex;
 }
+
+.llike-button-zone{
+  padding-top: 12px;
+}
+.fas.fa-heart {
+color: red;
+font-size: 1rem;
+}
+.far.fa-heart{
+font-size: 1rem; 
+}
+.far.fa-heart:hover{
+color: red;
+}
+.like_count{
+font-size: 0.8rem;
+margin-left: 0.5rem;
+}

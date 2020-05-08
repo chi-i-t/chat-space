@@ -1,0 +1,16 @@
+-if user_signed_in?
+  - if message.like_user(current_user.id)
+    = button_to group_message_like_path(@group, message.id, @like), method: :delete, remote: true do
+      %i.fas.fa-heart
+      %span.like_count
+        = message.likes_count
+  -else  
+    = button_to group_message_likes_path(@group, message.id), remote: true do
+      %i.far.fa-heart
+      %span.like_count
+        = message.likes_count
+-else
+  %i.far.fa-heart
+  %span.like_count
+    = message.likes_count
+
