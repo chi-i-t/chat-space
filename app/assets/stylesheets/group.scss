@@ -105,3 +105,12 @@ li {
     }
   }
 }
+
+.back-link {
+  text-align: right;
+  margin-right: 100px;
+  &__btn{
+    font-size: 1.3rem;
+    padding: 0 30px;
+  }
+}
