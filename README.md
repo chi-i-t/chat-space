@@ -26,11 +26,10 @@ Eメール：22222@gmail.com
 # 制作背景(意図)
 - プログラミングスクールのカリキュラムにて実装。
 - アプリケーションをゼロからリリースをするまでの開発の流れを学ぶ。
-- 今後、下記の追加したい機能を実装予定。
+- 今後、下記の追加したい機能を実装予定。(いいね機能、SNS認証は実装済み）
 
 # 課題や今後実装したい機能
 - レスポンシブデザイン
-- SNS認証ログインの追加
 
 # DEMO
 - ログイン画面 https://i.gyazo.com/7f22d6e37016e3fef01545ba78a6fc3a.png
@@ -55,6 +54,7 @@ Ruby/Ruby on Rails/JavaScript/jQuery/MySQL/Github/AWS/Visual Studio Code
 - has_many :groups_users
 - has_many :groups through: :groups_users
 - has_many :likes
+- has_many :sns_credentials
 
 
 ## groupsテーブル
@@ -106,3 +106,14 @@ Ruby/Ruby on Rails/JavaScript/jQuery/MySQL/Github/AWS/Visual Studio Code
 - belog_to :user
 - belog_to :message
 - belog_to :group
+
+
+## sns_credentialsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|provider|string||
+|uid|string||
+|user_id|integer||
+
+### Association
+- belongs_to :user
