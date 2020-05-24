@@ -19,3 +19,4 @@
               = f.password_field :password, autocomplete: "off"
           .actions
             = f.submit "Log in", class: 'btn'
+            = link_to 'Googleでログイン', user_google_oauth2_omniauth_authorize_path, method: :post

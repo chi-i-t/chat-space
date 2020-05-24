@@ -55,6 +55,7 @@ Ruby/Ruby on Rails/JavaScript/jQuery/MySQL/Github/AWS/Visual Studio Code
 - has_many :groups_users
 - has_many :groups through: :groups_users
 - has_many :likes
+- has_many :sns_credentials
 
 
 ## groupsテーブル
@@ -106,3 +107,14 @@ Ruby/Ruby on Rails/JavaScript/jQuery/MySQL/Github/AWS/Visual Studio Code
 - belog_to :user
 - belog_to :message
 - belog_to :group
+
+
+## sns_credentialsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|provider|string||
+|uid|string||
+|user_id|integer||
+
+### Association
+- belongs_to :user
